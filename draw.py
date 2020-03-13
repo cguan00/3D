@@ -16,7 +16,21 @@ def add_box( points, x, y, z, width, height, depth ):
   # Returns a matrix of those points
   # ====================
 def generate_sphere( points, cx, cy, cz, r, step ):
-    pass
+    rot = 0
+    circ = 0
+    while rot < 1:
+        while circ < 1:
+            x = r * math.cos(math.pi * circ) + cx
+            y = r * math.sin(math.pi * circ) * math.cos(2 * math.pi * rot) + cy
+            z = r * math.sin(math.pi * circ) * math.sin(2 * math.pi * rot) + cz
+
+            circ += step
+            rot += step
+
+            #add these points to matrix
+
+    #return points
+
 
   # ====================
   # adds all the points for a sphere with center
